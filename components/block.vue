@@ -68,4 +68,49 @@ svg.separator path{
 .removeBG{
   /*background-color: white !important;*/
 }
+.test{
+  animation-fill-mode: both;
+  animation-duration: 1000ms;
+  animation-delay: 2000ms;
+  animation-iteration-count: 1;
+  opacity: 1;
+  animation-name: test;
+}
+
+@-webkit-keyframes test{
+  0% {
+    transform: translate3d(100%, 0px, 0px) skewX(-30deg);
+    opacity: 0;
+  }
+  60% {
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+  80% {
+    transform: skewX(-5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes test{
+  0% {
+    transform: translate3d(100%, 0px, 0px) skewX(-30deg);
+    opacity: 0;
+  }
+  60% {
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+  80% {
+    transform: skewX(-5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
 </style>

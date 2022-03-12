@@ -34,7 +34,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     ['@nuxtjs/eslint-module', {
-      fix: true
+      fix: true,
+      cache: false
     }],
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
@@ -43,7 +44,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    //'@nuxtjs/pwa',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
