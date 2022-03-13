@@ -4,6 +4,7 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  loading: '~/components/loadingAnimation.vue',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -15,13 +16,14 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' },
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-  ],
+    ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -45,12 +47,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'nuxt-leaflet',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'fr'
+      lang: 'fr',
+      name: "Europ' Auto Ecole",
     }
   },
 
